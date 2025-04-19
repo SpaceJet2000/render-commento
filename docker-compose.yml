@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  commento:
+    image: registry.gitlab.com/commento/commento
+    environment:
+      - COMMENTO_ORIGIN=https://commento-8470.onrender.com
+      - COMMENTO_POSTGRES=${DATABASE_URL}  # Auto-injected by Render
+    ports:
+      - "8080:8080"
